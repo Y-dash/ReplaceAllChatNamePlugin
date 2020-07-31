@@ -1,7 +1,21 @@
-name: Replace All Chat Name Plugin
+name: ReplaceAllChatNamePlugin
 version: ${project.version}
 main: net.y_dash.minecraft.replace_all_chat_name_plugin.replaceallchatnameplugin.ReplaceAllChatNamePlugin
 api-version: 1.15
-authors: [Ydash]
+authors: [Y-dash]
 description: サーバー内のすべてのチャットを、指定された名前から送信されているかのように表示するプラグイン。
 website: https://y-dash.net
+commands:
+  cnset:
+    description: すべてのチャットの表示名をセットする
+    usage: /<command> [player]
+    permission: replace-all-chat-name-plugin.op
+  cnclear:
+    description: 表示名設定を削除する
+    usage: /<command>
+    permission: replace-all-chat-name-plugin.op
+permissions:
+  replace-all-chat-name-plugin.default:
+    default: true
+  replace-all-chat-name-plugin.op:
+    default: op
